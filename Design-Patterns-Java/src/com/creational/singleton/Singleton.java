@@ -22,7 +22,7 @@ public class Singleton {
 			return uniqueInstance;
 		}
 		
-		private static Singleton uniqueInstance = new Singleton();
+		private static final Singleton uniqueInstance = new Singleton();
 	}
 	
 	private int data;

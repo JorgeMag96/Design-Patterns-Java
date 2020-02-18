@@ -5,7 +5,7 @@ public class Singleton {
 	private Singleton() {};
 	
 	public static Singleton getInstance() {
-		return SingletonHelper.getInstance();
+		return SingletonHelper.uniqueInstance;
 	}
 	
 	public void setData(int data) {
@@ -17,10 +17,6 @@ public class Singleton {
 	}
 	
 	private static class SingletonHelper{
-		
-		private static Singleton getInstance() {
-			return uniqueInstance;
-		}
 		
 		private static final Singleton uniqueInstance = new Singleton();
 	}
